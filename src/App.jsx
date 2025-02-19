@@ -1,12 +1,11 @@
-//CardPokemon é a página inicial
-import CardPokemon from './components/CardPokemon.jsx'
+import CardsPokemon from './components/CardsPokemon'
 import '../src/global.css'
 
 function App() {
 
   return (
     <>
-      <CardPokemon />
+      <CardsPokemon />
     </>
   )
 

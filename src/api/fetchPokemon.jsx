@@ -1,4 +1,3 @@
-//Chamada da API para buscar os pokemons
 export const fetchPokemon = async (offset) => {
     const url = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`;
     const response = await fetch(url);
