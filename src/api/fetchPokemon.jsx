@@ -11,7 +11,7 @@ export const fetchPokemon = async (offset) => {
             name: responseData.name,
             image: responseData.sprites.front_default,
             type: responseData.types[0].type.name
-        }
+        } 
     });
 
     const detailData = await Promise.all(detailDataPromises);

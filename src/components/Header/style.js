@@ -13,13 +13,19 @@ export const HeaderStyle = styled.header`
     }
 
     div div{
+        display: flex;
+        gap: 20px;
+    }
+
+    div div div{
         border: 1px solid #fff;
         border-radius: 5px;
         padding: 5px;
+        display: flex;
         gap: 10px;
     }
 
-    div div input{
+    div div div input{
         background-color: #fff;
         cursor: pointer;
         color: #000;
@@ -27,16 +33,31 @@ export const HeaderStyle = styled.header`
         border-radius: 5px;
     }
 
-    div div img{
-        height: 30px;
+    div div div img{
+        height: 32px;
         padding: 3px;
         border-radius: 5px;
         cursor: pointer;
         background-color: #fff;
-        transition: 0.5s ease-in-out;
     }
 
-    div div img:hover{
-        height: 31px;
+    @media (max-width: 768px) {
+        div{
+            flex-direction: column;
+        }
+
+        div div{
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 576px) {
+        div div{
+            flex-direction: column;
+        }
+
+        div div div{
+            flex-direction: row;
+        }
     }
 `

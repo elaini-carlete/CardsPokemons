@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchPokemon } from "../../api/fetchPokemon";
 import Header from "../Header/index";
 import ButtonMaisPokemons from "../Button/index";
+import { CardsStyle } from "./style";
 
 export default function CardsPokemon() {
     const [pokemonData, setPokemonData] = useState([]);
@@ -21,15 +22,17 @@ export default function CardsPokemon() {
 
             <Header />
 
-            <ul>
-                {pokemonData.map((pokemon, index) => (
-                    <li key={index}>
-                        <img src={pokemon.image} alt={pokemon.name} />
-                        <p>{pokemon.name}</p>
-                        <p>{pokemon.type}</p>
-                    </li>
-                ))}
-            </ul>
+            <CardsStyle>
+                <ul>
+                    {pokemonData.map((pokemon, index) => (
+                        <li key={index}>
+                            <img src={pokemon.image} alt={pokemon.name} />
+                            <p>{pokemon.name}</p>
+                            <p>{pokemon.type}</p>
+                        </li>
+                    ))}
+                </ul>
+            </CardsStyle>
 
             <ButtonMaisPokemons updatePokemonCount={updatePokemonCount} />
 
