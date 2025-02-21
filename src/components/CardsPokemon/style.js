@@ -27,8 +27,17 @@ export const CardsStyle = styled.div`
         border-radius: 5px;
     }
 
-    ul li p{
+    ul li h3{
         margin-top: 10px;
+    }
+
+    ul li p{
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 5px;
     }
 
     @media (max-width: 992px) {

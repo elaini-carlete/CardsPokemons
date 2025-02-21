@@ -4,6 +4,7 @@ export const ButtonStyle = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 
     div {
         border: 1px solid #fff;
@@ -17,9 +18,5 @@ export const ButtonStyle = styled.div`
         color: #000;
         padding: 10px;
         border-radius: 5px;
-    }
-
-    @media (max-width: 992px) {
-        margin-bottom: 50px;
     }
 `

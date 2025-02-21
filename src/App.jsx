@@ -1,5 +1,5 @@
 import CardsPokemon from './components/CardsPokemon'
-import '../src/global.css'
+import "./global.css"
 
 function App() {
 

@@ -17,6 +17,12 @@ export default function CardsPokemon() {
         cardsPokemon.then((data) => setPokemonData([...pokemonData, ...data])); 
     }, [pokemonCount]);
 
+    const colorCards = (type) => {
+        const colorCard = `--bg-${type.toLowerCase()}`;
+        const color = getComputedStyle(document.documentElement).getPropertyValue(colorCard);
+        return color;
+    }
+
     return (
         <div>
 
@@ -25,9 +31,9 @@ export default function CardsPokemon() {
             <CardsStyle>
                 <ul>
                     {pokemonData.map((pokemon, index) => (
-                        <li key={index}>
+                        <li key={index} style={{ backgroundColor: colorCards(pokemon.type) }}>
                             <img src={pokemon.image} alt={pokemon.name} />
-                            <p>{pokemon.name}</p>
+                            <h3>{pokemon.name}</h3>
                             <p>{pokemon.type}</p>
                         </li>
                     ))}
