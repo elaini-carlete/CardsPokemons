@@ -5,12 +5,12 @@ export default function Header() {
     return (
         <HeaderStyle> 
             <div>
-                <img src="./src/assets/logo-pokemon.png" alt="Logo Pokemon" />
+                <img src="src/assets/logo-pokemon.png" alt="Logo Pokemon" />
 
                 <div>
                     <div>
                         <input type="text" placeholder="Digite o nome do pokémon" />
-                        <img src="./src/assets/lupa.png" alt="Lupa" />
+                        <img src="src/assets/lupa.png" alt="Lupa" />
                     </div>
 
                     <Types />
