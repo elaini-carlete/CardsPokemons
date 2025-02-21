@@ -1,14 +1,10 @@
-import CardsPokemon from './components/CardsPokemon'
+import { AppRoutes } from "./routes/routes"
 import "./global.css"
 
-function App() {
+export default function App() {
 
   return (
-    <>
-      <CardsPokemon />
-    </>
+    <AppRoutes />
   )
 
 }
-
-export default App

@@ -3,6 +3,7 @@ import { fetchPokemon } from "../../api/fetchPokemon";
 import Header from "../Header/index";
 import ButtonMaisPokemons from "../Button/index";
 import { CardsStyle } from "./style";
+import { Link } from "react-router-dom";
 
 export default function CardsPokemon() {
     const [pokemonData, setPokemonData] = useState([]);
@@ -32,7 +33,9 @@ export default function CardsPokemon() {
                 <ul>
                     {pokemonData.map((pokemon, index) => (
                         <li key={index} style={{ backgroundColor: colorCards(pokemon.type) }}>
-                            <img src={pokemon.image} alt={pokemon.name} />
+                            <Link to={`/pokemon/${pokemon.name}`}>
+                                <img src={pokemon.image} alt={pokemon.name} />
+                            </Link>
                             <h3>{pokemon.name}</h3>
                             <p>{pokemon.type}</p>
                         </li>
